@@ -17,7 +17,7 @@ public class kopapirollo {
         System.out.println("Kő/Papír/Olló");
         String gepvalasz2;
         String felhasznalo = sc.nextLine();
-        int random = (int) (Math.random());
+        int random = (int) (Math.random() * 3);
         
         String gepvalasz1;
         if (random == 0) {
@@ -28,14 +28,14 @@ public class kopapirollo {
             gepvalasz1 = "Olló";
         }
         
-        if (gepvalasz1 == "Kő" & felhasznalo == "Kő"){
-            gepvalasz2 = "Döntetlen!";
+        if (gepvalasz1 == felhasznalo){
+            gepvalasz2 = "döntetlen!";
         }
-        else if (gepvalasz1 == "Papír" & felhasznalo == "Kő" | gepvalasz1 == "Olló" & felhasznalo == "Papír" | gepvalasz1 == "Kő" & felhasznalo == "Olló"){
-            gepvalasz2 = "A gép nyert!";
+        else if (gepvalasz1 == "Papír" && felhasznalo == "Kő" || gepvalasz1 == "Olló" && felhasznalo == "Papír" || gepvalasz1 == "Kő" && felhasznalo == "Olló"){
+            gepvalasz2 = "a gép nyert!";
         }
         else{
-            gepvalasz2 = "A felhasználó nyert";
+            gepvalasz2 = "a felhasználó nyert";
         }
         System.out.println("A gép válasza: " + gepvalasz1);
         System.out.println("Tehát " + gepvalasz2);
